@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Forever Promise | Propose Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #e91e63; /* Romantic pink */
+            --secondary-color: #c2185b; /* Deep pink */
+            --accent-color: #ff80ab; /* Soft pink */
+            --text-color: #4a4a4a; /* Dark gray for readability */
+            --background-gradient: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%); /* Soft, warm gradient */
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background: var(--background-gradient);
+            margin: 0;
+            padding: 2rem 0;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-gallery {
+            margin: 3rem 0;
+        }
+
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+
+        .proposal-letter {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .proposal-letter p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(232, 30, 99, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 30, 99, 0.4);
+        }
+
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .revealed {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #reaction {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .heart {
+            color: var(--primary-color);
+            font-size: 2rem;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="animate_animated animate_fadeIn">
+            <h1>To My Irresistible Love 💖</h1>
+        </header>
+
+        <section class="photo-gallery">
+            <div class="photos">
+                <img src="/our journey.jpg" alt="Our Journey">
+                <img src="/shared smiles.jpg" alt="Shared Smiles">
+                <img src="/Precious moments.jpg" alt="Precious Moments">
+            </div>
+        </section>
+
+        <section class="proposal">
+            <div class="proposal-letter hidden" id="proposal-text">
+                <p>My Dearest Love,</p>
+                
+                <p>From the moment I first saw you, you’ve been my sweetest distraction, my happiest thought, and the reason my heart skips a beat every time your name pops up on my phone. You’ve completely taken over my mind—and honestly, I wouldn’t have it any other way.</p>
+
+                <p>Today, on Propose Day, I want to ask you something that’s been burning inside me for a while… Will you be mine? Completely, entirely, and maybe even a little recklessly? Because the truth is, I can’t get enough of you. Your smile, your laugh, the way you make me feel—it’s intoxicating.</p>
+
+                <p>I want to be the reason you blush when you read my texts, the reason you smile when you’re lost in thought, and the only arms you run to when you need warmth. I promise to tease you, spoil you, and love you in ways you never even imagined. And when we finally meet… let’s just say, I have so much planned for you. But for now, I’ll let you wonder what’s coming. Just know that it’s going to be unforgettable.</p>
+
+                <p>So, my love, what do you say? Are you ready to be mine, in every way possible?</p>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <h3>Will you make me the happiest person alive? 💍</h3>
+                    <button id="yes-btn">Yes, I'm All Yours! 🌟</button>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button id="propose-btn">Open Your Heart's Message 💌</button>
+            </div>
+
+            <div id="reaction" class="hidden">
+                <h2>🫂 You've Made My World Complete! 🌍💫</h2>
+                <p>I promise to cherish every moment with you, now and forever!</p>
+                <div class="heart">💖</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("propose-btn").addEventListener("click", function() {
+            this.classList.add('hidden');
+            document.getElementById("proposal-text").classList.add('revealed');
+        });
+
+        document.getElementById("yes-btn").addEventListener("click", function() {
+            document.getElementById("proposal-text").classList.remove('revealed');
+            document.getElementById("reaction").classList.add('revealed');
+            document.body.style.background = "linear-gradient(135deg, #ffebee 0%, #fce4ec 100%)";
+        });
+    </script>
+</body>
+</html>
